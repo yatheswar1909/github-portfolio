@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yatheswar Gullipalli | Cyber Security Professional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* CSS Variables for Premium Dark Theme */
+        :root {
+            --bg-dark: #0b0f19;
+            --text-light: #e2e8f0;
+            --text-muted: #94a3b8;
+            --accent-cyan: #00f0ff;
+            --accent-blue: #3b82f6;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.7;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(0, 240, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 85% 30%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+        }
+
+        /* Smooth reveal animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header / Hero Section */
+        header {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            animation: fadeIn 1s ease-out;
+            padding: 4rem 0;
+        }
+
+        .hero-tag {
+            color: var(--accent-cyan);
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #fff, var(--text-muted));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            color: var(--bg-dark);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 240, 255, 0.2);
+            color: var(--bg-dark);
+        }
+
+        /* Glassmorphism Sections */
+        section {
+            margin-bottom: 5rem;
+            animation: fadeIn 1s ease-out both;
+            animation-timeline: view();
+            animation-range: entry 10% cover 30%;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .section-title i {
+            color: var(--accent-cyan);
+        }
+
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 240, 255, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 240, 255, 0.05);
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-card h3 {
+            color: #fff;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 0.5rem;
+        }
+
+        .skill-card ul {
+            list-style: none;
+        }
+
+        .skill-card li {
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-card li::before {
+            content: "▹";
+            color: var(--accent-cyan);
+        }
+
+        /* Project / Experience specifics */
+        .highlight {
+            color: var(--accent-cyan);
+            font-weight: 600;
+        }
+
+        /* PDF Viewer */
+        .pdf-container {
+            width: 100%;
+            height: 600px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--glass-border);
+        }
+
+        /* Contact Section */
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            color: var(--text-muted);
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-cyan);
+            transform: translateY(-3px);
+        }
+
+        .contact-info p {
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-info i {
+            width: 25px;
+            color: var(--accent-blue);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--glass-border);
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            .glass-card { padding: 1.5rem; }
+            .pdf-container { height: 400px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <span class="hero-tag">Cyber Security Student & Developer</span>
+            <h1>Yatheswar Gullipalli</h1>
+            <p>Securing the digital landscape while innovating physical solutions. Currently pursuing my B.Tech in CSE (Cyber Security) at Manav Rachna University.</p>
+            <div class="social-links">
+                <a href="https://github.com/yatheswar1909" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/yatheswar-gullipalli-a5208031b" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:yatheswargulliapalli8712@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            
+            <a href="Yatheswar_Gullipalli_Resume.pdf" class="btn" download="Yatheswar_Gullipalli_Resume.pdf">
+                <i class="fas fa-download"></i> Download Resume
+            </a>
+        </header>
+
+        <section id="about">
+            <h2 class="section-title"><i class="fas fa-user-shield"></i> About Me</h2>
+            <div class="glass-card">
+                <p>I am a passionate cybersecurity enthusiast, developer, and problem-solver. Driven by the challenge of uncovering vulnerabilities and building robust applications, I thrive at the intersection of offensive security and software development. Whether I'm analyzing network protocols, leading a CTF team, or architecting subscription-based business models, I approach every project with a hacker's mindset and a developer's precision.</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2 class="section-title"><i class="fas fa-code"></i> Technical Arsenal</h2>
+            <div class="skills-grid">
+                <div class="glass-card skill-card">
+                    <h3>Cybersecurity</h3>
+                    <ul>
+                        <li>Penetration Testing</li>
+                        <li>Bug Bounty Hunting</li>
+                        <li>Network Security</li>
+                        <li>CTF Problem Solving</li>
+                    </ul>
+                </div>
+                <div class="glass-card skill-card">
+                    <h3>Development</h3>
+                    <ul>
+                        <li>Java Programming</li>
+                        <li>Machine Learning Concepts</li>
+                        <li>MongoDB</li>
+                        <li>Android Studio & Spyder IDE</li>
+                    </ul>
+                </div>
+                <div class="glass-card skill-card">
+                    <h3>Tools & Multimedia</h3>
+                    <ul>
+                        <li>Cisco Packet Tracer</li>
+                        <li>Cloud Architecture</li>
+                        <li>Video Editing & Motion Graphics</li>
+                        <li>Audio Manipulation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 class="section-title"><i class="fas fa-project-diagram"></i> Featured Work</h2>
+            <div class="glass-card">
+                <h3 style="color: #fff; margin-bottom: 1rem; font-size: 1.5rem;">MakeMyFood</h3>
+                <p style="margin-bottom: 1rem;">A disruptive, subscription-based chef booking platform designed to bring professional culinary services directly into homes and event spaces.</p>
+                <p><strong>Business Model:</strong> Engineered as a reliable subscription service priced at <span class="highlight">1,000 Rs/month for 5 chef visits</span>. This provides a high-quality, practical alternative to traditional food delivery platforms by focusing on service provision rather than food transport.</p>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2 class="section-title"><i class="fas fa-trophy"></i> Experience & Achievements</h2>
+            <div class="glass-card skill-card">
+                <ul>
+                    <li><span class="highlight">Business Development Specialist Intern</span> at Younity Community</li>
+                    <li><span class="highlight">Team Leader</span> for Enigma CTF 2025 at Manav Rachna Campus</li>
+                    <li>Competitor in the Creovate 2K25 Bug Bounty & Cyberonites Hackathon</li>
+                    <li>Completed the MongoDB Java Developer Path</li>
+                    <li>Actively pursuing advanced TCM Security certifications (PJPT/PNPT)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="resume">
+            <h2 class="section-title"><i class="fas fa-file-alt"></i> Resume</h2>
+            <div class="glass-card" style="text-align: center;">
+                <p style="margin-bottom: 1.5rem;">Review my detailed background, academic history, and technical proficiencies.</p>
+                
+                <div class="pdf-container">
+                    <embed src="Yatheswar_Gullipalli_Resume.pdf" type="application/pdf" width="100%" height="100%">
+                </div>
+
+                <a href="Yatheswar_Gullipalli_Resume.pdf" class="btn" download="Yatheswar_Gullipalli_Resume.pdf">
+                    <i class="fas fa-download"></i> Save PDF Copy
+                </a>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="section-title"><i class="fas fa-satellite-dish"></i> Establish Connection</h2>
+            <div class="glass-card contact-info">
+                <p><i class="fas fa-envelope"></i> yatheswargulliapalli8712@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Faridabad, Haryana</p>
+                <p><i class="fas fa-university"></i> Manav Rachna University</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Yatheswar Gullipalli. Engineered for Security.</p>
+    </footer>
+
+</body>
+</html>
